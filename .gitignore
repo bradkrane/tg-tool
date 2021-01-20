@@ -1,3 +1,6 @@
+creds.yaml
+
+# Github generated below
 *.gem
 *.rbc
 /.config
