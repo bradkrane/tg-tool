@@ -32,8 +32,8 @@ adj_line_items = {}
 variants = {}         # store only keys for later
 while adj_line_ids.length > 0
   page = gecko.StockAdjustmentLineItem.where ids: adj_line_ids.shift(MAX_LIMIT)
-  page.each do |item| 
-    adj_line_items[item.id] = item if !adj_line_items.has_key? item.id 
+  page.each do |item|
+    adj_line_items[item.id] = item if !adj_line_items.has_key? item.id
     variants[item.variant_id] = true if !variants.has_key? item.variant_id
   end
 end
